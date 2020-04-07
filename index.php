@@ -20,7 +20,36 @@
         		if(!empty($messageError)) {
         			echo $messageError;
         		} else {
-        			echo "Pour l'instant il n'y en a qu'un !";
+        			echo 'Résultat avec $emails<br>';
+        			echo "<ul>\n";
+        			foreach ($emails as $email) {
+        				# code...
+        				echo "<li>".$email['id']." - ".$email['email']."</li>";
+        				//echo "<li>".$email[0]." - ".$email[1]."</li>";
+        			}
+        			echo "</ul>";
+        			
+        			echo "<hr>";
+
+        			echo 'Résultat avec $emails2<br>';
+        			echo "<ul>\n";
+        			foreach ($listeEmails2 as $email) {
+        				# code...
+        				//echo "<li>".$email['id']." - ".$email['email']."</li>";
+        				echo "<li>".$email[0]." - ".$email[1]."</li>";
+        			}
+        			echo "</ul>";
+
+        			echo "<hr>";
+
+        			echo 'Résultat avec $emails3<br>';
+        			echo "<ul>\n";
+        			while ($email = $emails3->fetch(PDO::FETCH_ASSOC)) {
+        				# code...
+        				echo "<li>".$email['id']." - ".$email['email']."</li>";
+        				//echo "<li>".$email[0]." - ".$email[1]."</li>";
+        			}
+        			echo "</ul>";
         		}
         	?>
         </fieldset>
