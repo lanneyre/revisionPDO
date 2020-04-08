@@ -7,12 +7,19 @@
         <meta charset="utf-8">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Untitled</title>
+        <title>Démo</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="author" href="humans.txt">
     </head>
     <body>
-        
+        <fieldset>
+        	<legend>Inscription</legend>
+        	<form action="inscription.php" method="POST">
+        		<input type="email" name="email" id="email" placeholder="Inscrivez-vous à notre newsletter !" required="">
+        		<input type="submit" name="submit" id="submit" value="S'inscrire">
+        	</form>
+        </fieldset>
+        <br>
         <fieldset>
         	<legend>Tous les mails que j'ai stocké dans ma bdd</legend>
         	<?php 
@@ -53,6 +60,7 @@
         		}
         	?>
         </fieldset>
+		
         <script src="js/main.js"></script>
     </body>
 </html>
